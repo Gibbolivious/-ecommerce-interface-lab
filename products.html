@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Products</h1>
+    </header>
+
+    <main>
+      <aside aria-labelledby="filter-heading">
+        <h2 id="filter-heading">Filter Products</h2>
+        <form>
+          <fieldset>
+            <legend>Category</legend>
+            <label
+              ><input type="checkbox" name="category" value="electronics" />
+              Electronics</label
+            >
+            <label
+              ><input type="checkbox" name="category" value="clothing" />
+              Clothing</label
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Price Range</legend>
+            <label
+              ><input type="radio" name="price" value="low" class="price" />
+              Under $50</label
+            >
+            <label
+              ><input type="radio" name="price" value="high" class="price" />
+              Above $50</label
+            >
+          </fieldset>
+        </form>
+      </aside>
+
+      <section aria-labelledby="product-grid-heading">
+        <h2 id="product-grid-heading">All Products</h2>
+
+        <article>
+          <img src="product.jpg" alt="Product Name" />
+          <h3>Product Name</h3>
+          <p class="price">49.99</p>
+
+          <a href="detail.html">View Details</a>
+        </article>
+
+        <!-- More products -->
+      </section>
+    </main>
+  </body>
+</html>

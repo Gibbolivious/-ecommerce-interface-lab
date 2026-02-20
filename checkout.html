@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>checkout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Checkout</h1>
+
+      <section aria-labelledby="shipping-heading">
+        <h2 id="shipping-heading">Shipping Address</h2>
+        <form>
+          <label>
+            Full Name:
+            <input type="text" name="name" required />
+          </label>
+
+          <label>
+            Street Address:
+            <input type="text" name="street" required />
+          </label>
+
+          <label>
+            Zip Code:
+            <input type="text" name="zip" required />
+          </label>
+        </form>
+      </section>
+
+      <section aria-labelledby="payment-heading">
+        <h2 id="payment-heading">Payment Details</h2>
+        <form>
+          <fieldset>
+            <legend>Select Payment Method</legend>
+            <label>
+              <input type="radio" name="payment" value="credit" required />
+              Credit Card
+            </label>
+            <label>
+              <input type="radio" name="payment" value="paypal" />
+              PayPal
+            </label>
+          </fieldset>
+        </form>
+      </section>
+
+      <aside aria-labelledby="order-summary-heading">
+        <h2 id="order-summary-heading">Final Summary</h2>
+        <p style="display: inline">Subtotal:</p>
+          <p class="price" style="display: inline">49.99</p>
+        <br />
+        <p style="display: inline">Shipping: 
+          <p class="price" style="display: inline;"></p>5.00</p>
+        <p style="display: inline;"><strong>Total: 
+          <p class="price" style="display: inline;"></p>54.99</strong></p>
+        <button>Place Order</button>
+      </aside>
+    </main>
+  </body>
+</html>
