@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1" charset="UTF-8" />
+    <title>cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Your Cart</h1>
+
+      <section class="cart-container" aria-live="polite">
+        <p>Your cart has inventory.</p>
+      </section>
+
+      <ul id="flexbox">
+        <li >
+          <img src="product.jpg" alt="Product Name" />
+          <h3>Crate box</h3>
+          <p class="price">49.99</p>
+
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" />
+          </label>
+        </li>
+        <li >
+          <img src="product.jpg" alt="Product Name" />
+          <h3>Crate Key</h3>
+          <p class="price">1.90</p>
+
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" />
+          </label>
+        </li>
+      </ul>
+
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Order Summary</h2>
+        <p>Subtotal: $49.99</p>
+      </section>
+
+      <a href="checkout.html" role="button">Proceed to Checkout</a>
+    </main>
+  </body>
+</html>
