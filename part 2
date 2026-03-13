@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1" charset="UTF-8" />
+    <title>landing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MyShop</h1>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="hero-heading">
+        <h2 id="hero-heading">Discover Amazing Products</h2>
+        <p>Browse our collection of top-quality items at unbeatable prices.</p>
+        <button>Shop Now</button>
+      </section>
+
+      <section aria-labelledby="featured-heading">
+        <h2 id="featured-heading">Featured Products</h2>
+        <!-- Product previews here -->
+      </section>
+
+      <section aria-labelledby="discount-heading">
+        <h2 id="discount-heading">Discounted Products</h2>
+        <!-- Discounted products here -->
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 MyShop</p>
+    </footer>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1" charset="UTF-8" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Products</h1>
+    </header>
+
+    <main>
+      <aside aria-labelledby="filter-heading" id="product-aside-width">
+        <h2 id="filter-heading">Filter Products</h2>
+        <form id="product-form">
+          <fieldset>
+            <legend>Category</legend>
+            <label
+              ><input type="checkbox" name="category" value="electronics" />
+              Electronics</label
+            >
+            <label
+              ><input type="checkbox" name="category" value="clothing" />
+              Clothing</label
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend>Price Range</legend>
+            <label
+              ><input type="radio" name="price" value="low" class="price" />
+              Under $50</label
+            >
+            <label
+              ><input type="radio" name="price" value="high" class="price" />
+              Above $50</label
+            >
+          </fieldset>
+        </form>
+      </aside>
+
+      <section aria-labelledby="product-grid-heading">
+        <h2 id="product-grid-heading">All Products</h2>
+      </section>
+
+      <section aria-labelledby="product-grid-heading">
+
+        <article>
+          <img src="product.jpg" alt="Product Name" />
+          <h3>Product Name</h3>
+          <p class="price">49.99</p>
+
+          <a href="detail.html">View Details</a>
+        </article>
+
+        <article>
+          <img src="product.jpg" alt="Product Name" />
+          <h3>Product Name</h3>
+          <p class="price">49.99</p>
+
+          <a href="detail.html">View Details</a>
+        </article>
+
+        <!-- More products -->
+      </section>
+    </main>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1" charset="UTF-8" />
+    <title>signup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Create Account</h1>
+
+      <form>
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Password:
+          <input type="password" name="password" required minlength="8" />
+        </label>
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </main>
+  </body>
+</html>
+
+:root {
+  --primary-color: #1e2a38;
+  --accent-color: #ff7a00;
+  --light-bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text-color: #333;
+  --border-color: #ddd;
+  --success: #27ae60;
+  --error: #c0392b;
+}
+
+*{
+  max-width: 100%;
+  height: auto;
+}
+
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.6;
+ 
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+  color: var(--primary-color);
+
+  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav{
+  flex-direction: column;
+  flex-direction: row;
+ 
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+/* Hover */
+nav a:hover,
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Button hover */
+button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Button active (pressed) */
+button:active {
+  transform: scale(0.97);
+}
+
+/* Focus accessibility */
+input:focus,
+button:focus {
+  outline: 3px solid var(--accent-color);
+}
+
+section[aria-labelledby="product-grid-heading"] {
+  grid-template-columns: 2fr 1fr;
+  display: grid;
+  width: 90vw;
+  vertical-align: top;
+  margin: 10px;
+  padding: 15px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: 0.3s ease;
+
+  animation: bounce-and-fade 2s infinite ease-in-out;
+}
+
+#product-form{
+  grid-template-columns: 2fr 1fr;
+  display: grid;
+}
+
+section[aria-labelledby="hero-heading"]{
+  text-align: center;
+}
+
+/* Hover card */
+section[aria-labelledby="product-grid-heading"] article:hover {
+  transform: scale(1.03);
+}
+
+/* Alternate background */
+section[aria-labelledby="product-grid-heading"] article:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+/* Empty Cart */
+.cart-container:empty {
+  padding: 20px;
+  border: 2px dashed var(--border-color);
+  background-color: #fff8e6;
+}
+
+/* Currency Symbol */
+.price::before {
+  content: "$";
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Required fields */
+input:required {
+  border: 2px solid var(--error);
+}
+
+/* Valid fields */
+input:valid {
+  border: 2px solid var(--success);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card-bg);
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+}
+
+/* First column bold */
+td:first-child,
+th:first-child {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Account page order list styling */
+dl dt {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Add decorative quotes to reviews */
+blockquote::before {
+  content: "“";
+  font-size: 25px;
+  color: var(--accent-color);
+}
+
+blockquote::after {
+  content: "”";
+  font-size: 25px;
+  color: var(--accent-color);
+}
+
+/* Mobile */
+@media (min-width: 480px){
+
+}
+
+/* Tablet */
+@media (min-width: 768px){
+}
+
+/* Desktop */
+@media (769px <= width <= 1280px){
+
+  #payment-heading{
+    display: none;
+  }
+
+  .checkout-align{
+    align-items: center;
+    width: 45vw;
+  }
+
+    #product-aside-width{
+    grid-template-columns: 2fr 1fr;
+    width: 25vw;
+    }
+    
+}
+
+#flexbox{
+  flex-wrap: wrap;
+  align-items:center;
+}
+
+/* @keyframes slide-in{
+  from {transform: translateX(-100%);}
+  50%{opacity: 0.5;}
+  to {transform: translateX(0%);}
+} */
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1"
+    charset="UTF-8" 
+    
+    />
+    <title>account</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome, Gabriel</h1>
+      <nav aria-label="Account Navigation">
+        <ul>
+          <li><a href="#">Order History</a></li>
+          <li><a href="#">Profile Settings</a></li>
+          <li><a href="#">Wishlist</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Previous Orders</h2>
+
+      <dl>
+        <dt>Order #1234</dt>
+        <dd class="price">89.99 - Delivered</dd>
+
+        <dt>Order #5678</dt>
+        <dd class="price">45.00 - Shipped</dd>
+      </dl>
+    </main>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1" charset="UTF-8" />
+    <title>cart</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Your Cart</h1>
+
+      <section class="cart-container" aria-live="polite">
+        <p>Your cart has inventory.</p>
+      </section>
+
+      <ul id="flexbox">
+        <li >
+          <img src="product.jpg" alt="Product Name" />
+          <h3>Crate box</h3>
+          <p class="price">49.99</p>
+
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" />
+          </label>
+        </li>
+        <li >
+          <img src="product.jpg" alt="Product Name" />
+          <h3>Crate Key</h3>
+          <p class="price">1.90</p>
+
+          <label>
+            Quantity:
+            <input type="number" min="1" value="1" />
+          </label>
+        </li>
+      </ul>
+
+      <section aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Order Summary</h2>
+        <p>Subtotal: $49.99</p>
+      </section>
+
+      <a href="checkout.html" role="button">Proceed to Checkout</a>
+    </main>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1" charset="UTF-8" />
+    <title>checkout</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Checkout</h1>
+
+      <div aria-labelledby="shipping-heading" class="checkout-align">
+        <h2 id="shipping-heading" >Shipping Address</h2>
+        <form>
+          <label>
+            Full Name:
+            <input type="text" name="name" required />
+          </label>
+          <br>
+          <label>
+            Street Address:
+            <input type="text" name="street" required />
+          </label>
+          <br>
+          <label>
+            Zip Code:
+            <input type="text" name="zip" required />
+          </label>
+        </form>
+      </section>
+
+      <section aria-labelledby="payment-heading" id="payment-heading">
+        <h2 id="payment-heading">Payment Details</h2>
+        <form>
+          <fieldset>
+            <legend>Select Payment Method</legend>
+            <label>
+              <input type="radio" name="payment" value="credit" required />
+              Credit Card
+            </label>
+            <label>
+              <input type="radio" name="payment" value="paypal" />
+              PayPal
+            </label>
+          </fieldset>
+        </form>
+      </section>
+
+      <div aria-labelledby="order-summary-heading" class="checkout-align">
+        <h2 id="order-summary-heading" >Final Summary</h2>
+        <p style="display: inline">Subtotal:</p>
+          <p class="price" style="display: inline">49.99</p>
+        <br />
+        <p style="display: inline">Shipping: 
+          <p class="price" style="display: inline;"></p>5.00</p>
+        <p style="display: inline;"><strong>Total: 
+          <p class="price" style="display: inline;"></p>54.99</strong></p>
+        <button>Place Order</button>
+      </aside>
+    </main>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport"
+    content="width=device-width"
+    initial-scale="1" charset="UTF-8" />
+    <title>detail</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Product Name</h1>
+        <img src="product.jpg" alt="Product Name" />
+        <p class="price">49.99</p>
+
+        <section aria-labelledby="specs-heading">
+          <h2 id="specs-heading">Technical Specifications</h2>
+          <table>
+            <caption>
+              Product Details
+            </caption>
+            <tr>
+              <th scope="row">Weight</th>
+              <td>1kg</td>
+            </tr>
+            <tr>
+              <th scope="row">Color</th>
+              <td>Black</td>
+            </tr>
+          </table>
+        </section>
+
+        <section aria-labelledby="purchase-heading">
+          <h2 id="purchase-heading">Purchase</h2>
+          <form>
+            <label for="quantity">Quantity:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              value="1"
+            />
+            <button type="submit">Add to Cart</button>
+          </form>
+        </section>
+
+        <section aria-labelledby="reviews-heading">
+          <h2 id="reviews-heading">User Reviews</h2>
+
+          <article>
+            <h3>Gabriel C.</h3>
+            <blockquote>Great product! Highly recommend.</blockquote>
+          </article>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
